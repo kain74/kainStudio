@@ -1,0 +1,243 @@
+@charset "UTF-8";
+/*
+    작업자 : Ham Sung Jae
+    만든날짜 : 2023-03-07
+    배포날짜 : 2023-03-00
+*/
+@import "reset";
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+body {
+    background: #000;
+    font: 17px/1.4 "orbitron";
+    letter-spacing: 1px;
+    color: #ddd;
+}
+/* ============================
+    Common
+=============================== */
+/* Lable*/
+[class*='label-']{
+    padding: .2vw .5vw;
+    font-size: .8vw;
+    font-style: normal;
+    border-radius: 20px;
+    background: rgb(179, 30, 30);
+}
+.label-red{background: red;}
+.label-orange{background: orange;}
+.label-yellow{background: yellow;color:#333}
+.label-green{background: green;}
+.label-blue{background: blue;}
+.label-indigo{background: indigo;}
+.label-purple{background: purple;}
+
+#wrapper{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    
+    >video{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        top: 0px;
+        left: 0px;
+        opacity: 0.5;
+    }
+    #box-contaioner{
+        position: absolute;
+        left:0;
+        top:0;
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+        .interaction-container{
+            padding-top:20px;
+            .header{
+                padding:1vw 2vw 0 2vw;
+                h1{
+                    font-size: 3vw;
+                }
+            }
+        }
+        .inner{
+            perspective: 600px;
+            display: flex;
+            flex-wrap: wrap;
+            gap:1.5vw;
+            overflow-y: auto;
+            padding: 2vw;
+            &:hover{
+                a{
+                    opacity: .7;
+                    transform: scale(0.96);
+                }
+            }
+            a{
+                position: relative;
+                overflow: hidden;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                padding:3vw 0;
+                height:16vw;
+                flex: 1 1 20%;
+                color: #fff;
+                font-size: 1.5vw;
+                backdrop-filter: blur(10px);
+                box-shadow: 0 25px 45px rgba(0,0,0,0.3);
+                background: rgba(255,255,255,0.2);
+                border: 1px solid rgba(255,255,255,0.2);
+                box-sizing: border-box;
+                border-radius: .5vw;
+                transform: translateZ(0) scale(1);
+                transition: .5s;
+                img{
+                    border: none;
+                    transition: .5s;
+                }
+                .waves{
+                    position: absolute;
+                    bottom: 0;
+                    width: 100%;
+                    height: 3vw;
+                    z-index: -1;
+                    .wave{
+                        height: 100%;
+                        animation-play-state: paused;
+                        opacity: 0;
+                        transition: .5s;
+                        img{
+                            width: 100%;
+                        }
+                    }
+                }
+                
+                &:hover{
+                    box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+                    background: rgba(255,255,255,0.3);
+                    transform: translateZ(10px);
+                    opacity: 1;
+                    img[attr-partner="파트너뱅크"]{
+                        filter: drop-shadow(0 5px 5px rgba(0,0,0,0.2));
+                    }
+                    .waves{
+                        .wave{
+                            opacity: 1;
+                            animation: waveAnimate 4s linear infinite;
+                        }
+                    }
+                    
+                }
+                &:nth-child(3n+1){
+                    .waves{
+                        .wave{
+                            background: url(../img/wave.png) repeat-x 0 0;
+                            background-size: 1000px 3vw;
+                        }
+                    }
+                }
+                &:nth-child(3n+2){
+                    .waves{
+                        .wave{
+                            background: url(../img/wave2.png) repeat-x 0 0;
+                            background-size: 1000px 3vw;
+                        }
+                    }
+                }
+                &:nth-child(3n+3){
+                    .waves{
+                        .wave{
+                            background: url(../img/wave3.png) repeat-x 0 0;
+                            background-size: 1000px 3vw;
+                        }
+                    }
+                }
+                p{
+                    margin-top:.5vw;
+                    text-align: center;
+                }
+                img{
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+
+
+
+/* ============================
+    Animation
+=============================== */
+/* wave */
+.waves{
+    position: relative;
+    .wave{
+        position: absolute;
+        left:0;
+        bottom:0;
+        width: 100%;
+        height: 3vw;
+        background: url(../img/wave.png) repeat-x 0 0;
+        background-size: 1000px 3vw;
+        opacity: 1;
+        bottom: 0;
+        z-index: 1000;
+        animation: waveAnimate 4s linear infinite;
+        
+    }
+}
+@keyframes waveAnimate{
+    0%{
+        background-position-x: 1000px;
+    }
+    100%{
+        background-position-x: 0;
+    }
+}
+
+@media (max-width:1024px) {
+    #wrapper{
+        #box-contaioner{
+            .inner{
+                a{
+                    padding: 5vw;
+                    height:25vw;
+                    flex: 1 1 25%;
+                }
+            }
+        }
+    }
+    
+}
+@media (max-width:720px) {
+    #wrapper{
+        #box-contaioner{
+            .inner{
+                a{
+                    padding: 5vw;
+                    height:34vw;
+                    flex: 1 1 33%;
+                }
+            }
+        }
+    }
+    
+}
+@media (max-width:320px) {
+    #wrapper{
+        #box-contaioner{
+            .inner{
+                a{
+                    padding: 5vw;
+                    height:50vw;
+                    flex: 1 1 50%;
+                }
+            }
+        }
+    }
+    
+}
