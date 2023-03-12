@@ -82,7 +82,7 @@ body {
                 justify-content: center;
                 flex-direction: column;
                 padding:3vw 0;
-                height:16vw;
+                height:12vw;
                 flex: 1 1 20%;
                 color: #fff;
                 font-size: 1.5vw;
@@ -90,13 +90,28 @@ body {
                 box-shadow: 0 25px 45px rgba(0,0,0,0.3);
                 background: rgba(255,255,255,0.2);
                 border: 1px solid rgba(255,255,255,0.2);
-                box-sizing: border-box;
                 border-radius: .5vw;
                 transform: translateZ(0) scale(1);
                 transition: .5s;
                 img{
+                    height: 80%;
                     border: none;
                     transition: .5s;
+                }
+                .icon {
+                    position: relative;
+                    display: inline-block;
+                    width: 7vw;
+                    height: 7vw;
+                    border-radius: 200px;
+                    background: rgba(0,0,0,0.6);
+                    border-top: 1px solid rgba(255,255,255,0.3);
+                    border-left: 1px solid rgba(255,255,255,0.3);
+                    backdrop-filter: blur(10px);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    transform-origin: 50% 50%;
                 }
                 .waves{
                     position: absolute;
@@ -120,9 +135,7 @@ body {
                     background: rgba(255,255,255,0.3);
                     transform: translateZ(10px);
                     opacity: 1;
-                    img[attr-partner="파트너뱅크"]{
-                        filter: drop-shadow(0 5px 5px rgba(0,0,0,0.2));
-                    }
+                    
                     .waves{
                         .wave{
                             opacity: 1;
@@ -158,9 +171,6 @@ body {
                 p{
                     margin-top:.5vw;
                     text-align: center;
-                }
-                img{
-                    height: 100%;
                 }
             }
         }
