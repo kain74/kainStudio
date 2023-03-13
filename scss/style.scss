@@ -18,7 +18,7 @@ body {
 /* Lable*/
 [class*='label-']{
     padding: .2vw .5vw;
-    font-size: .8vw;
+    font-size: .6vw;
     font-style: normal;
     border-radius: 20px;
     background: rgb(179, 30, 30);
@@ -129,6 +129,10 @@ body {
                         }
                     }
                 }
+                .date{
+                    font-size: 1vw;
+                    margin-top: 0.2vw;
+                }
                 
                 &:hover{
                     box-shadow: 0 15px 35px rgba(0,0,0,0.6);
@@ -169,7 +173,7 @@ body {
                     }
                 }
                 p{
-                    margin-top:.5vw;
+                    margin-top:.2vw;
                     text-align: center;
                 }
             }
