@@ -45,7 +45,7 @@ body {
         left: 0px;
         opacity: 0.5;
     }
-    #box-contaioner{
+    #box-container{
         position: absolute;
         left:0;
         top:0;
@@ -130,7 +130,7 @@ body {
                     }
                 }
                 .date{
-                    font-size: 1vw;
+                    font-size: 5px;
                     margin-top: 0.2vw;
                 }
                 
@@ -173,7 +173,7 @@ body {
                     }
                 }
                 p{
-                    margin-top:.2vw;
+                    margin-top: 5px;
                     text-align: center;
                 }
             }
@@ -215,12 +215,17 @@ body {
 
 @media (max-width:1024px) {
     #wrapper{
-        #box-contaioner{
+        #box-container{
             .inner{
                 a{
-                    padding: 5vw;
-                    height:25vw;
+                    padding: 4vw;
+                    height:20vw;
                     flex: 1 1 25%;
+                    .icon{
+                        width: 15vw;
+                        height: 15vw;
+                        font-size: 3vw;
+                    }
                 }
             }
         }
@@ -229,21 +234,46 @@ body {
 }
 @media (max-width:720px) {
     #wrapper{
-        #box-contaioner{
+        #box-container{
             .inner{
+                gap : 3vw;
                 a{
                     padding: 5vw;
                     height:34vw;
                     flex: 1 1 33%;
+                    .icon{
+                        width: 15vw;
+                        height: 15vw;
+                        font-size: 3vw;
+                    }
                 }
             }
         }
     }
-    
+}
+@media (max-width:360px) {
+    #wrapper{
+        #box-container{
+            .inner{
+                gap: 5vw;
+                padding: 5vw;
+                a{
+                    padding: 5vw;
+                    height:40vw;
+                    flex: 1 1 100%;
+                    .icon{
+                        width: 20vw;
+                        height: 20vw;
+                        font-size: 5vw;
+                    }
+                }
+            }
+        }
+    }
 }
 @media (max-width:320px) {
     #wrapper{
-        #box-contaioner{
+        #box-container{
             .inner{
                 a{
                     padding: 5vw;
@@ -253,5 +283,4 @@ body {
             }
         }
     }
-    
 }

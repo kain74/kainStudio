@@ -90,7 +90,7 @@ body {
   left: 0px;
   opacity: 0.5;
 }
-#wrapper #box-contaioner {
+#wrapper #box-container {
   position: absolute;
   left: 0;
   top: 0;
@@ -98,16 +98,16 @@ body {
   height: 100%;
   overflow-y: auto;
 }
-#wrapper #box-contaioner .interaction-container {
+#wrapper #box-container .interaction-container {
   padding-top: 20px;
 }
-#wrapper #box-contaioner .interaction-container .header {
+#wrapper #box-container .interaction-container .header {
   padding: 1vw 2vw 0 2vw;
 }
-#wrapper #box-contaioner .interaction-container .header h1 {
+#wrapper #box-container .interaction-container .header h1 {
   font-size: 3vw;
 }
-#wrapper #box-contaioner .inner {
+#wrapper #box-container .inner {
   perspective: 600px;
   display: flex;
   flex-wrap: wrap;
@@ -115,11 +115,11 @@ body {
   overflow-y: auto;
   padding: 2vw;
 }
-#wrapper #box-contaioner .inner:hover a {
+#wrapper #box-container .inner:hover a {
   opacity: 0.7;
   transform: scale(0.96);
 }
-#wrapper #box-contaioner .inner a {
+#wrapper #box-container .inner a {
   position: relative;
   overflow: hidden;
   display: flex;
@@ -139,12 +139,12 @@ body {
   transform: translateZ(0) scale(1);
   transition: 0.5s;
 }
-#wrapper #box-contaioner .inner a img {
+#wrapper #box-container .inner a img {
   height: 80%;
   border: none;
   transition: 0.5s;
 }
-#wrapper #box-contaioner .inner a .icon {
+#wrapper #box-container .inner a .icon {
   position: relative;
   display: inline-block;
   width: 7vw;
@@ -159,50 +159,50 @@ body {
   justify-content: center;
   transform-origin: 50% 50%;
 }
-#wrapper #box-contaioner .inner a .waves {
+#wrapper #box-container .inner a .waves {
   position: absolute;
   bottom: 0;
   width: 100%;
   height: 3vw;
   z-index: -1;
 }
-#wrapper #box-contaioner .inner a .waves .wave {
+#wrapper #box-container .inner a .waves .wave {
   height: 100%;
   animation-play-state: paused;
   opacity: 0;
   transition: 0.5s;
 }
-#wrapper #box-contaioner .inner a .waves .wave img {
+#wrapper #box-container .inner a .waves .wave img {
   width: 100%;
 }
-#wrapper #box-contaioner .inner a .date {
-  font-size: 1vw;
+#wrapper #box-container .inner a .date {
+  font-size: 5px;
   margin-top: 0.2vw;
 }
-#wrapper #box-contaioner .inner a:hover {
+#wrapper #box-container .inner a:hover {
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
   background: rgba(255, 255, 255, 0.3);
   transform: translateZ(10px);
   opacity: 1;
 }
-#wrapper #box-contaioner .inner a:hover .waves .wave {
+#wrapper #box-container .inner a:hover .waves .wave {
   opacity: 1;
   animation: waveAnimate 4s linear infinite;
 }
-#wrapper #box-contaioner .inner a:nth-child(3n+1) .waves .wave {
+#wrapper #box-container .inner a:nth-child(3n+1) .waves .wave {
   background: url(../img/wave.png) repeat-x 0 0;
   background-size: 1000px 3vw;
 }
-#wrapper #box-contaioner .inner a:nth-child(3n+2) .waves .wave {
+#wrapper #box-container .inner a:nth-child(3n+2) .waves .wave {
   background: url(../img/wave2.png) repeat-x 0 0;
   background-size: 1000px 3vw;
 }
-#wrapper #box-contaioner .inner a:nth-child(3n+3) .waves .wave {
+#wrapper #box-container .inner a:nth-child(3n+3) .waves .wave {
   background: url(../img/wave3.png) repeat-x 0 0;
   background-size: 1000px 3vw;
 }
-#wrapper #box-contaioner .inner a p {
-  margin-top: 0.2vw;
+#wrapper #box-container .inner a p {
+  margin-top: 5px;
   text-align: center;
 }
 
@@ -236,21 +236,50 @@ body {
   }
 }
 @media (max-width: 1024px) {
-  #wrapper #box-contaioner .inner a {
-    padding: 5vw;
-    height: 25vw;
+  #wrapper #box-container .inner a {
+    padding: 4vw;
+    height: 20vw;
     flex: 1 1 25%;
+  }
+  #wrapper #box-container .inner a .icon {
+    width: 15vw;
+    height: 15vw;
+    font-size: 3vw;
   }
 }
 @media (max-width: 720px) {
-  #wrapper #box-contaioner .inner a {
+  #wrapper #box-container .inner {
+    gap: 3vw;
+  }
+  #wrapper #box-container .inner a {
     padding: 5vw;
     height: 34vw;
     flex: 1 1 33%;
   }
+  #wrapper #box-container .inner a .icon {
+    width: 15vw;
+    height: 15vw;
+    font-size: 3vw;
+  }
+}
+@media (max-width: 360px) {
+  #wrapper #box-container .inner {
+    gap: 5vw;
+    padding: 5vw;
+  }
+  #wrapper #box-container .inner a {
+    padding: 5vw;
+    height: 40vw;
+    flex: 1 1 100%;
+  }
+  #wrapper #box-container .inner a .icon {
+    width: 20vw;
+    height: 20vw;
+    font-size: 5vw;
+  }
 }
 @media (max-width: 320px) {
-  #wrapper #box-contaioner .inner a {
+  #wrapper #box-container .inner a {
     padding: 5vw;
     height: 50vw;
     flex: 1 1 50%;
