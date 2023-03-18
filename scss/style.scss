@@ -70,8 +70,7 @@ body {
             padding: 2vw;
             &:hover{
                 a{
-                    opacity: .7;
-                    transform: scale(0.96);
+                    transform: scale(0.98);
                 }
             }
             a{
@@ -91,7 +90,7 @@ body {
                 background: rgba(255,255,255,0.2);
                 border: 1px solid rgba(255,255,255,0.2);
                 border-radius: .5vw;
-                transform: translateZ(0) scale(1);
+                transform: scale(1);
                 transition: .5s;
                 img{
                     height: 80%;
@@ -136,10 +135,9 @@ body {
                 
                 &:hover{
                     box-shadow: 0 15px 35px rgba(0,0,0,0.6);
-                    background: rgba(255,255,255,0.3);
+                    background: rgba(255,255,255,0.4);
                     transform: translateZ(10px);
                     opacity: 1;
-                    
                     .waves{
                         .wave{
                             opacity: 1;
